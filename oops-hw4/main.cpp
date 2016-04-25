@@ -1,10 +1,3 @@
-//
-//  main.cpp
-//  paint
-//
-//  Created by Nidhi on 4/24/16.
-//  Copyright © 2016 Nidhi. All rights reserved.
-//
 
 
 #include<iostream>
