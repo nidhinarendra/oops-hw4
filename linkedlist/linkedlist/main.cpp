@@ -63,7 +63,7 @@ void printhighest()
     node * temp2 = head;
     while(temp2!= NULL)
     {
-        cout << temp2->data << "and it's next value is";
+        cout << temp2->data << " is pointing to ";
         
         if (temp2->nexthighest != NULL)
             cout << temp2->nexthighest->data << endl;
@@ -77,26 +77,25 @@ void printhighest()
 void PrintList()
 {
     node * temp2 = head;
+    cout << "The given list is ";
    while(temp2!= NULL)
    {
        cout << temp2 -> data;
        temp2 = temp2 -> nextlink;
-       cout << endl;
+       cout << "  ";
    }
-       
+    cout << endl;
 }
 
 int main(int argc, const char * argv[]) {
-    head = NULL; //Initially creating an empty list
-    Insert (4);
-    Insert (8);
-    Insert (1);
-    Insert (12);
+    head = NULL; //Initially creating an empty head
+    Insert (6);
     Insert (5);
+    Insert (4);
+    Insert (3);
     Insert (2);
-    
+    Insert (1);
     PrintList();
-    
     gethighest(head);
     printhighest();
     }
