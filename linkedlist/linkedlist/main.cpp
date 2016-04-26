@@ -99,5 +99,4 @@ int main(int argc, const char * argv[]) {
     
     gethighest(head);
     printhighest();
-    
     }
