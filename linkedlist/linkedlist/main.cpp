@@ -11,18 +11,8 @@ node * head;
 node* newnode;
 node* temp;
 
-node * gethighest(node * localhead)
-{
-    if(localhead == NULL)
-        return NULL;
-    else
-    {
-        localhead -> nexthighest = gethighest(localhead -> nextlink);
-        return max(localhead -> nexthighest, localhead);
-    }
-}
 
-node *  max(node *ptr1, node * ptr2)
+node*  maxnode(node *ptr1, node * ptr2)
 {
     if(ptr1 == NULL)
         return ptr2;
@@ -33,6 +23,17 @@ node *  max(node *ptr1, node * ptr2)
         return ptr1;
     else
         return ptr2;
+}
+
+node * gethighest(node * localhead)
+{
+    if(localhead == NULL)
+        return NULL;
+    else
+    {
+        localhead -> nexthighest = gethighest(localhead -> nextlink);
+        return maxnode(localhead -> nexthighest, localhead);
+    }
 }
 
 void Insert (int x){
