@@ -89,12 +89,12 @@ void PrintList()
 
 int main(int argc, const char * argv[]) {
     head = NULL; //Initially creating an empty head
-    Insert (6);
+    Insert (12);
+    Insert (3);
+    Insert (12);
     Insert (5);
     Insert (4);
-    Insert (3);
-    Insert (2);
-    Insert (1);
+    Insert (8);
     PrintList();
     gethighest(head);
     printhighest();
